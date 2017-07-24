@@ -1,0 +1,35 @@
+#include <stdio.h>
+    @r->r6
+    @j->r4
+    @i->r5
+
+int main(void)
+{
+    int r = 9;
+    int i, j;
+
+    for(j = 1; j <= (2*r - 1); j++)
+    {
+        if( j <= r )
+        {
+            for(i=1; i <= (r-j); i++)
+                printf(" ");
+            for(i=1; i <= (2*j - 1); i++)
+                printf("*");
+
+            printf("\n");
+        }
+        else
+        {
+            for(i=1; i <= (j-r); i++)
+                printf(" ");
+            for(i=1; i <= ((2*r - 1) - (j - r)*2); i++)
+                printf("*");
+
+            printf("\n");
+        }
+    }
+
+    return 0;
+}
+
